@@ -1,0 +1,4 @@
+selenium
+pytest
+flake8
+webdriver_manager

